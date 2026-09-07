@@ -1,0 +1,14 @@
+{
+  "dataset_id": "demo-pet-water-fountain-us-v1",
+  "dataset_version": "1.0.0",
+  "source_type": "synthetic_demo",
+  "product_id": "target-pwf-001",
+  "product_name": "MarketFlow QuietPaw 宠物饮水机",
+  "category": "pet_water_fountain",
+  "target_market": "US",
+  "currency": "USD",
+  "expected_price": 45.99,
+  "description": "面向养猫家庭的静音饮水机，强调易清洁水路、滤芯提醒和缺水保护。",
+  "declared_selling_points": ["静音水泵", "易清洁水路", "滤芯提醒", "缺水保护"],
+  "disclaimer": "所有商品、价格与评论均为作品集演示用虚构数据。"
+}

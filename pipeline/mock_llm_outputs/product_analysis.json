@@ -1,0 +1,161 @@
+{
+  "portable-blender": {
+    "product_id": "target-pb-001",
+    "positioning": {
+      "content": "面向美国通勤与健身人群、强调便携和易清洁体验的中端随行榨汁杯。",
+      "evidence_ids": ["target-pb-001"],
+      "confidence": 0.9,
+      "source_type": "ai_inference"
+    },
+    "target_users": [
+      {
+        "name": "通勤与健身用户",
+        "description": "需要在办公室、健身房或出行途中制作单人饮品，并重视携带安全和清洁效率。",
+        "evidence_ids": ["target-pb-001"],
+        "confidence": 0.82,
+        "source_type": "ai_inference"
+      }
+    ],
+    "use_scenarios": [
+      {
+        "name": "办公室与健身后饮用",
+        "description": "在缺少固定料理设备的场景中制作一杯即饮饮品。",
+        "evidence_ids": ["target-pb-001"],
+        "confidence": 0.84,
+        "source_type": "ai_inference"
+      }
+    ],
+    "selling_points": [
+      {
+        "name": "可拆洗刀头",
+        "description": "以可拆洗结构降低刀头周围的清洁负担。",
+        "evidence_ids": ["target-pb-001"],
+        "confidence": 0.95,
+        "source_type": "ai_inference"
+      },
+      {
+        "name": "通勤防漏",
+        "description": "防漏杯盖与轻量设计共同服务于随身携带场景。",
+        "evidence_ids": ["target-pb-001"],
+        "confidence": 0.9,
+        "source_type": "ai_inference"
+      }
+    ],
+    "information_gaps": [
+      {
+        "field": "电池容量与续航次数",
+        "reason": "商品描述只声明 USB-C 充电，未提供可验证续航参数。",
+        "impact": "high",
+        "evidence_ids": ["target-pb-001"],
+        "confidence": 0.98,
+        "source_type": "ai_inference"
+      }
+    ]
+  },
+  "pet-water-fountain": {
+    "product_id": "target-pwf-001",
+    "positioning": {
+      "content": "面向美国养猫家庭、突出低噪音和低维护负担的中端宠物饮水机。",
+      "evidence_ids": ["target-pwf-001"],
+      "confidence": 0.91,
+      "source_type": "ai_inference"
+    },
+    "target_users": [
+      {
+        "name": "重视安静与卫生的养猫家庭",
+        "description": "希望宠物持续饮水，同时不愿频繁拆洗复杂水路。",
+        "evidence_ids": ["target-pwf-001"],
+        "confidence": 0.84,
+        "source_type": "ai_inference"
+      }
+    ],
+    "use_scenarios": [
+      {
+        "name": "室内持续供水",
+        "description": "在客厅或卧室等对噪音敏感的环境中持续运行。",
+        "evidence_ids": ["target-pwf-001"],
+        "confidence": 0.86,
+        "source_type": "ai_inference"
+      }
+    ],
+    "selling_points": [
+      {
+        "name": "易清洁水路",
+        "description": "通过简化水路结构降低日常清洁时间。",
+        "evidence_ids": ["target-pwf-001"],
+        "confidence": 0.94,
+        "source_type": "ai_inference"
+      },
+      {
+        "name": "维护提醒",
+        "description": "滤芯提醒和缺水保护降低用户忘记维护的风险。",
+        "evidence_ids": ["target-pwf-001"],
+        "confidence": 0.92,
+        "source_type": "ai_inference"
+      }
+    ],
+    "information_gaps": [
+      {
+        "field": "水箱容量与滤芯周期",
+        "reason": "描述未提供容量和滤芯更换周期，无法判断维护频率。",
+        "impact": "high",
+        "evidence_ids": ["target-pwf-001"],
+        "confidence": 0.97,
+        "source_type": "ai_inference"
+      }
+    ]
+  },
+  "ergonomic-seat-cushion": {
+    "product_id": "target-esc-001",
+    "positioning": {
+      "content": "面向美国居家办公用户、兼顾支撑和透气性的中端中小椅型坐垫。",
+      "evidence_ids": ["target-esc-001"],
+      "confidence": 0.9,
+      "source_type": "ai_inference"
+    },
+    "target_users": [
+      {
+        "name": "长时间居家办公用户",
+        "description": "需要稳定坐姿支撑，同时关注久坐闷热和椅面适配。",
+        "evidence_ids": ["target-esc-001"],
+        "confidence": 0.83,
+        "source_type": "ai_inference"
+      }
+    ],
+    "use_scenarios": [
+      {
+        "name": "中小尺寸办公椅久坐",
+        "description": "用于居家办公期间的连续坐姿支撑。",
+        "evidence_ids": ["target-esc-001"],
+        "confidence": 0.9,
+        "source_type": "ai_inference"
+      }
+    ],
+    "selling_points": [
+      {
+        "name": "分区支撑",
+        "description": "用分区结构表达稳定支撑定位。",
+        "evidence_ids": ["target-esc-001"],
+        "confidence": 0.92,
+        "source_type": "ai_inference"
+      },
+      {
+        "name": "透气且可拆洗",
+        "description": "透气表层与可拆洗外套共同降低久坐和维护负担。",
+        "evidence_ids": ["target-esc-001"],
+        "confidence": 0.93,
+        "source_type": "ai_inference"
+      }
+    ],
+    "information_gaps": [
+      {
+        "field": "尺寸与泡棉耐久参数",
+        "reason": "描述未给出具体尺寸、承重或长期回弹测试信息。",
+        "impact": "high",
+        "evidence_ids": ["target-esc-001"],
+        "confidence": 0.96,
+        "source_type": "ai_inference"
+      }
+    ]
+  }
+}

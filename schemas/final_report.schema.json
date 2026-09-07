@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketflow.local/schemas/final_report.schema.json",
+  "title": "MarketFlow AI Final Report",
+  "description": "前端消费的完整报告信封，组合四类分析 Schema，并附带数据版本和校验状态。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "schema_version",
+    "generated_at",
+    "analysis_status",
+    "dataset",
+    "input_snapshot",
+    "executive_summary",
+    "product_analysis",
+    "competitor_analysis",
+    "pain_points",
+    "recommendations",
+    "validation_summary",
+    "disclaimer"
+  ],
+  "properties": {
+    "report_id": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": "1.0.0" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "analysis_status": {
+      "type": "string",
+      "enum": ["complete", "partial", "failed"]
+    },
+    "dataset": { "$ref": "#/$defs/datasetMetadata" },
+    "input_snapshot": { "$ref": "#/$defs/inputSnapshot" },
+    "executive_summary": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/summaryClaim" }
+    },
+    "product_analysis": {
+      "$ref": "product_analysis.schema.json"
+    },
+    "competitor_analysis": {
+      "$ref": "competitor_analysis.schema.json"
+    },
+    "pain_points": {
+      "type": "array",
+      "items": { "$ref": "pain_point.schema.json" }
+    },
+    "recommendations": {
+      "type": "array",
+      "items": { "$ref": "recommendation.schema.json" }
+    },
+    "validation_summary": { "$ref": "#/$defs/validationSummary" },
+    "disclaimer": { "type": "string", "minLength": 1 }
+  },
+  "$defs": {
+    "datasetMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dataset_id",
+        "dataset_version",
+        "data_source_type",
+        "competitor_count",
+        "review_count"
+      ],
+      "properties": {
+        "dataset_id": { "type": "string", "minLength": 1 },
+        "dataset_version": { "type": "string", "minLength": 1 },
+        "data_source_type": {
+          "type": "string",
+          "enum": ["synthetic_demo", "public_sample", "user_upload"]
+        },
+        "competitor_count": { "type": "integer", "minimum": 0 },
+        "review_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "inputSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "product_id",
+        "product_name",
+        "target_market",
+        "description",
+        "expected_price",
+        "currency",
+        "evidence_ids",
+        "confidence",
+        "source_type"
+      ],
+      "properties": {
+        "product_id": { "type": "string", "minLength": 1 },
+        "product_name": { "type": "string", "minLength": 1 },
+        "target_market": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "expected_price": { "type": ["number", "null"], "minimum": 0 },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "confidence": { "const": 1 },
+        "source_type": { "const": "data_fact" }
+      }
+    },
+    "summaryClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "content", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "content": { "type": "string", "minLength": 1 },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "source_type": {
+          "type": "string",
+          "enum": ["data_fact", "calculated", "ai_inference", "recommendation"]
+        }
+      }
+    },
+    "validationSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_valid",
+        "evidence_ids_valid",
+        "calculations_verified",
+        "unsupported_claim_count",
+        "warnings"
+      ],
+      "properties": {
+        "schema_valid": { "type": "boolean" },
+        "evidence_ids_valid": { "type": "boolean" },
+        "calculations_verified": { "type": "boolean" },
+        "unsupported_claim_count": { "type": "integer", "minimum": 0 },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

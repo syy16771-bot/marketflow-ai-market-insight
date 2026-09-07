@@ -1,0 +1,8 @@
+review_id,competitor_id,rating,review_text,review_language,source_type,is_synthetic
+pb-r001,pb-c001,2,"Frozen fruit often gets stuck and needs to be cut very small.",en,synthetic_demo,true
+pb-r002,pb-c001,3,"It is portable, but cleaning around the blade is difficult.",en,synthetic_demo,true
+pb-r003,pb-c002,5,"The self-clean mode saves time after a workout.",en,synthetic_demo,true
+pb-r004,pb-c002,3,"It blends well, but the cup feels heavy in my bag.",en,synthetic_demo,true
+pb-r005,pb-c003,2,"The lid leaked after I carried it sideways during my commute.",en,synthetic_demo,true
+pb-r006,pb-c003,4,"The battery indicator is useful, though one charge does not last a full week.",en,synthetic_demo,true
+

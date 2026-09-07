@@ -1,0 +1,35 @@
+[
+  {
+    "competitor_id": "pwf-c001",
+    "name": "AquaPaw Basic",
+    "price": 32.99,
+    "currency": "USD",
+    "rating": 4.0,
+    "review_count": 2100,
+    "features": ["2L 水箱", "基础过滤", "塑料机身"],
+    "selling_points": ["入门价格", "安装简单"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "pwf-c002",
+    "name": "WhisperPet Steel",
+    "price": 55.99,
+    "currency": "USD",
+    "rating": 4.5,
+    "review_count": 970,
+    "features": ["不锈钢水盘", "静音水泵", "2.5L 水箱"],
+    "selling_points": ["材质卫生", "低噪音"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "pwf-c003",
+    "name": "FilterPaw Smart",
+    "price": 48.99,
+    "currency": "USD",
+    "rating": 4.2,
+    "review_count": 720,
+    "features": ["滤芯提醒", "水位灯", "2.2L 水箱"],
+    "selling_points": ["维护提醒", "状态可视"],
+    "source_type": "synthetic_demo"
+  }
+]

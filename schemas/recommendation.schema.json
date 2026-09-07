@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketflow.local/schemas/recommendation.schema.json",
+  "title": "MarketFlow AI Recommendation",
+  "description": "单条可执行建议，必须连接上游痛点或差异机会，并保留证据。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recommendation_id",
+    "title",
+    "content",
+    "type",
+    "related_pain_point_ids",
+    "related_opportunity_ids",
+    "evidence_ids",
+    "user_value",
+    "priority",
+    "implementation_effort",
+    "risk_note",
+    "confidence",
+    "source_type"
+  ],
+  "properties": {
+    "recommendation_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "content": { "type": "string", "minLength": 1 },
+    "type": {
+      "type": "string",
+      "enum": ["product_improvement", "listing_optimization", "positioning"]
+    },
+    "related_pain_point_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "related_opportunity_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "evidence_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "可引用 product_id、competitor_id 或 review_id。"
+    },
+    "user_value": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["P0", "P1", "P2"]
+    },
+    "implementation_effort": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "risk_note": { "type": "string" },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "source_type": { "const": "recommendation" }
+  },
+  "anyOf": [
+    { "properties": { "related_pain_point_ids": { "minItems": 1 } } },
+    { "properties": { "related_opportunity_ids": { "minItems": 1 } } }
+  ]
+}

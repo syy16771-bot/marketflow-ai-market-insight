@@ -1,0 +1,8 @@
+review_id,competitor_id,rating,review_text,review_language,source_type,is_synthetic
+pwf-r001,pwf-c001,2,"The pump became noticeably louder after two weeks.",en,synthetic_demo,true
+pwf-r002,pwf-c001,3,"It works, but the narrow water channel is hard to scrub.",en,synthetic_demo,true
+pwf-r003,pwf-c002,5,"The stainless tray is easy to rinse and the pump is very quiet.",en,synthetic_demo,true
+pwf-r004,pwf-c002,3,"Replacement filters cost more than I expected.",en,synthetic_demo,true
+pwf-r005,pwf-c003,4,"The filter reminder is helpful for a busy household.",en,synthetic_demo,true
+pwf-r006,pwf-c003,2,"Hair collects in the corners and full cleaning takes too long.",en,synthetic_demo,true
+

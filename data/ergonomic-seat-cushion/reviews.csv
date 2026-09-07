@@ -1,0 +1,7 @@
+review_id,competitor_id,rating,review_text,review_language,source_type,is_synthetic
+esc-r001,esc-c001,2,"The cushion flattened after a month of daily use.",en,synthetic_demo,true
+esc-r002,esc-c001,3,"It feels comfortable at first but gets warm after an hour.",en,synthetic_demo,true
+esc-r003,esc-c002,5,"The grid stays cooler during long work sessions.",en,synthetic_demo,true
+esc-r004,esc-c002,2,"It is too wide for my small office chair.",en,synthetic_demo,true
+esc-r005,esc-c003,4,"The firm support helps me sit upright for longer.",en,synthetic_demo,true
+esc-r006,esc-c003,3,"The cover is removable, but putting it back on is awkward.",en,synthetic_demo,true

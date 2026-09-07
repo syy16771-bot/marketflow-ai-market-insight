@@ -1,0 +1,35 @@
+[
+  {
+    "competitor_id": "pb-c001",
+    "name": "BlendGo Mini",
+    "price": 29.99,
+    "currency": "USD",
+    "rating": 4.1,
+    "review_count": 1280,
+    "features": ["单键操作", "USB-C 充电", "380ml"],
+    "selling_points": ["低价", "轻量"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "pb-c002",
+    "name": "FreshMix Pro",
+    "price": 49.99,
+    "currency": "USD",
+    "rating": 4.4,
+    "review_count": 860,
+    "features": ["六叶刀头", "自动清洗", "450ml"],
+    "selling_points": ["搅拌能力", "易清洁"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "pb-c003",
+    "name": "ActiveCup One",
+    "price": 42.99,
+    "currency": "USD",
+    "rating": 4.2,
+    "review_count": 640,
+    "features": ["防漏锁扣", "电量显示", "400ml"],
+    "selling_points": ["通勤防漏", "续航可视"],
+    "source_type": "synthetic_demo"
+  }
+]

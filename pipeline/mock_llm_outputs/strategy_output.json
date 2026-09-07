@@ -1,0 +1,98 @@
+{
+  "portable-blender": [
+    {
+      "recommendation_id": "rec-pb-001",
+      "title": "验证并明确复杂食材处理边界",
+      "content": "在产品验证中覆盖冻结水果等高阻力食材，并在 Listing 中明确建议切块尺寸和适用食材。",
+      "type": "product_improvement",
+      "related_pain_point_ids": ["pain-pb-performance"],
+      "related_opportunity_ids": [],
+      "evidence_ids": ["pb-r001", "pb-r004"],
+      "user_value": "high",
+      "priority": "P0",
+      "implementation_effort": "medium",
+      "risk_note": "测试完成前不得承诺能够处理所有冻结食材。",
+      "confidence": 0.88,
+      "source_type": "recommendation"
+    },
+    {
+      "recommendation_id": "rec-pb-002",
+      "title": "用拆洗步骤强化易清洁卖点",
+      "content": "在 Listing 中展示刀头拆卸和清洁步骤，把结构证据放在泛化卖点之前。",
+      "type": "listing_optimization",
+      "related_pain_point_ids": ["pain-pb-performance"],
+      "related_opportunity_ids": ["opp-pb-001"],
+      "evidence_ids": ["pb-r002"],
+      "user_value": "medium",
+      "priority": "P1",
+      "implementation_effort": "low",
+      "risk_note": "易清洁表述应与实际结构和清洁测试一致。",
+      "confidence": 0.82,
+      "source_type": "recommendation"
+    }
+  ],
+  "pet-water-fountain": [
+    {
+      "recommendation_id": "rec-pwf-001",
+      "title": "减少水路死角和拆洗步骤",
+      "content": "优先检查狭窄水路与毛发堆积区域，减少需要工具才能清洁的结构。",
+      "type": "product_improvement",
+      "related_pain_point_ids": ["pain-pwf-cleaning"],
+      "related_opportunity_ids": ["opp-pwf-001"],
+      "evidence_ids": ["pwf-r002", "pwf-r006"],
+      "user_value": "high",
+      "priority": "P0",
+      "implementation_effort": "high",
+      "risk_note": "结构调整需要同时验证防漏和水泵运行表现。",
+      "confidence": 0.9,
+      "source_type": "recommendation"
+    },
+    {
+      "recommendation_id": "rec-pwf-002",
+      "title": "展示完整清洁路径",
+      "content": "Listing 使用拆解图说明可清洁部件、清洁顺序和滤芯维护信息。",
+      "type": "listing_optimization",
+      "related_pain_point_ids": ["pain-pwf-cleaning"],
+      "related_opportunity_ids": ["opp-pwf-001"],
+      "evidence_ids": ["pwf-r002", "pwf-r006"],
+      "user_value": "high",
+      "priority": "P1",
+      "implementation_effort": "low",
+      "risk_note": "未确定滤芯周期前不提供固定更换天数。",
+      "confidence": 0.87,
+      "source_type": "recommendation"
+    }
+  ],
+  "ergonomic-seat-cushion": [
+    {
+      "recommendation_id": "rec-esc-001",
+      "title": "增加长期回弹验证",
+      "content": "在确认材料方案前进行持续受压测试，并将耐久表现作为产品验收项目。",
+      "type": "product_improvement",
+      "related_pain_point_ids": ["pain-esc-durability"],
+      "related_opportunity_ids": ["opp-esc-001"],
+      "evidence_ids": ["esc-r001"],
+      "user_value": "high",
+      "priority": "P1",
+      "implementation_effort": "medium",
+      "risk_note": "当前只有一条痛点证据，量产决策前需要更多样本。",
+      "confidence": 0.62,
+      "source_type": "recommendation"
+    },
+    {
+      "recommendation_id": "rec-esc-002",
+      "title": "明确适配尺寸和验证边界",
+      "content": "Listing 标注建议椅面尺寸，并将耐久描述限制在已完成的测试条件内。",
+      "type": "positioning",
+      "related_pain_point_ids": ["pain-esc-durability"],
+      "related_opportunity_ids": ["opp-esc-001"],
+      "evidence_ids": ["esc-r001", "esc-r004"],
+      "user_value": "medium",
+      "priority": "P1",
+      "implementation_effort": "low",
+      "risk_note": "尺寸与耐久信息尚需产品测试确认。",
+      "confidence": 0.66,
+      "source_type": "recommendation"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_id": "demo-portable-blender-us-v1",
+  "dataset_version": "1.0.0",
+  "source_type": "synthetic_demo",
+  "product_id": "target-pb-001",
+  "product_name": "MarketFlow GoBlend 便携榨汁杯",
+  "category": "portable_blender",
+  "target_market": "US",
+  "currency": "USD",
+  "expected_price": 39.99,
+  "description": "面向通勤与健身人群的便携榨汁杯，强调轻量、防漏、USB-C 充电和可拆洗结构。",
+  "declared_selling_points": ["轻量便携", "防漏杯盖", "USB-C 充电", "可拆洗刀头"],
+  "disclaimer": "所有商品、价格与评论均为作品集演示用虚构数据。"
+}

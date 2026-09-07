@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketflow.local/schemas/pain_point.schema.json",
+  "title": "MarketFlow AI Pain Point",
+  "description": "单个用户痛点。频次为确定性计算，严重程度与痛点归纳为 AI 推断。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pain_point_id",
+    "name",
+    "description",
+    "frequency",
+    "severity",
+    "affected_scenarios",
+    "competitor_ids",
+    "evidence_ids",
+    "evidence_status",
+    "confidence",
+    "source_type"
+  ],
+  "properties": {
+    "pain_point_id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "frequency": { "$ref": "#/$defs/frequency" },
+    "severity": { "$ref": "#/$defs/severity" },
+    "affected_scenarios": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "competitor_ids": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+    "evidence_status": {
+      "type": "string",
+      "enum": ["sufficient", "limited", "insufficient"]
+    },
+    "confidence": { "$ref": "#/$defs/confidence" },
+    "source_type": { "const": "ai_inference" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "evidence_status": { "const": "sufficient" } },
+        "required": ["evidence_status"]
+      },
+      "then": {
+        "properties": { "evidence_ids": { "minItems": 2 } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "evidence_status": { "const": "limited" } },
+        "required": ["evidence_status"]
+      },
+      "then": {
+        "properties": { "evidence_ids": { "minItems": 1, "maxItems": 1 } }
+      }
+    },
+    {
+      "if": {
+        "properties": { "evidence_status": { "const": "insufficient" } },
+        "required": ["evidence_status"]
+      },
+      "then": {
+        "properties": { "evidence_ids": { "maxItems": 1 } }
+      }
+    }
+  ],
+  "$defs": {
+    "evidenceIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "仅引用 reviews.csv 中存在的 review_id。"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "frequency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "level", "sample_size", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "count": { "type": "integer", "minimum": 0 },
+        "level": { "type": "string", "enum": ["low", "medium", "high"] },
+        "sample_size": { "type": "integer", "minimum": 1 },
+        "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+        "confidence": { "const": 1 },
+        "source_type": { "const": "calculated" }
+      }
+    },
+    "severity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "reason", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "level": { "type": "string", "enum": ["low", "medium", "high"] },
+        "reason": { "type": "string", "minLength": 1 },
+        "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "source_type": { "const": "ai_inference" }
+      }
+    }
+  }
+}

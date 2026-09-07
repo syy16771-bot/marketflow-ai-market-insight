@@ -1,0 +1,14 @@
+{
+  "dataset_id": "demo-ergonomic-seat-cushion-us-v1",
+  "dataset_version": "1.0.0",
+  "source_type": "synthetic_demo",
+  "product_id": "target-esc-001",
+  "product_name": "MarketFlow AirSupport 人体工学坐垫",
+  "category": "ergonomic_seat_cushion",
+  "target_market": "US",
+  "currency": "USD",
+  "expected_price": 44.99,
+  "description": "面向居家办公人群的人体工学坐垫，强调分区支撑、透气表层和适配中小尺寸办公椅。",
+  "declared_selling_points": ["分区支撑", "透气表层", "防滑底部", "可拆洗外套"],
+  "disclaimer": "所有商品、价格与评论均为作品集演示用虚构数据。"
+}

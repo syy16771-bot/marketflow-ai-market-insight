@@ -1,0 +1,35 @@
+[
+  {
+    "competitor_id": "esc-c001",
+    "name": "SitEase Memory",
+    "price": 34.99,
+    "currency": "USD",
+    "rating": 4.1,
+    "review_count": 1850,
+    "features": ["记忆棉", "U 形设计", "可拆洗外套"],
+    "selling_points": ["尾骨减压", "柔软"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "esc-c002",
+    "name": "CoolSeat Grid",
+    "price": 52.99,
+    "currency": "USD",
+    "rating": 4.3,
+    "review_count": 760,
+    "features": ["凝胶网格", "透气结构", "宽大尺寸"],
+    "selling_points": ["散热", "大尺寸"],
+    "source_type": "synthetic_demo"
+  },
+  {
+    "competitor_id": "esc-c003",
+    "name": "PostureBase Firm",
+    "price": 46.99,
+    "currency": "USD",
+    "rating": 4.0,
+    "review_count": 590,
+    "features": ["高密度泡棉", "防滑底部", "中等尺寸"],
+    "selling_points": ["稳定支撑", "不易变形"],
+    "source_type": "synthetic_demo"
+  }
+]

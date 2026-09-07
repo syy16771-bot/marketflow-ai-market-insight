@@ -1,0 +1,340 @@
+{
+  "report_id": "marketflow-portable-blender-2026-09-07T13:24:52.869455+00:00",
+  "schema_version": "1.0.0",
+  "generated_at": "2026-09-07T13:24:52.869455+00:00",
+  "analysis_status": "complete",
+  "dataset": {
+    "dataset_id": "demo-portable-blender-us-v1",
+    "dataset_version": "1.0.0",
+    "data_source_type": "synthetic_demo",
+    "competitor_count": 3,
+    "review_count": 6
+  },
+  "input_snapshot": {
+    "product_id": "target-pb-001",
+    "product_name": "MarketFlow GoBlend 便携榨汁杯",
+    "target_market": "US",
+    "description": "面向通勤与健身人群的便携榨汁杯，强调轻量、防漏、USB-C 充电和可拆洗结构。",
+    "expected_price": 39.99,
+    "currency": "USD",
+    "evidence_ids": [
+      "target-pb-001"
+    ],
+    "confidence": 1,
+    "source_type": "data_fact"
+  },
+  "executive_summary": [
+    {
+      "title": "商品定位",
+      "content": "面向美国通勤与健身人群、强调便携和易清洁体验的中端随行榨汁杯。",
+      "evidence_ids": [
+        "target-pb-001"
+      ],
+      "confidence": 0.9,
+      "source_type": "ai_inference"
+    },
+    {
+      "title": "可验证的易清洁结构",
+      "content": "将可拆洗刀头与清洁步骤展示为核心差异，而不只使用泛化的易清洁表述。",
+      "evidence_ids": [
+        "target-pb-001",
+        "pb-r002"
+      ],
+      "confidence": 0.86,
+      "source_type": "ai_inference"
+    },
+    {
+      "title": "验证并明确复杂食材处理边界",
+      "content": "在产品验证中覆盖冻结水果等高阻力食材，并在 Listing 中明确建议切块尺寸和适用食材。",
+      "evidence_ids": [
+        "pb-r001",
+        "pb-r004"
+      ],
+      "confidence": 0.88,
+      "source_type": "recommendation"
+    }
+  ],
+  "product_analysis": {
+    "product_id": "target-pb-001",
+    "positioning": {
+      "content": "面向美国通勤与健身人群、强调便携和易清洁体验的中端随行榨汁杯。",
+      "evidence_ids": [
+        "target-pb-001"
+      ],
+      "confidence": 0.9,
+      "source_type": "ai_inference"
+    },
+    "target_users": [
+      {
+        "name": "通勤与健身用户",
+        "description": "需要在办公室、健身房或出行途中制作单人饮品，并重视携带安全和清洁效率。",
+        "evidence_ids": [
+          "target-pb-001"
+        ],
+        "confidence": 0.82,
+        "source_type": "ai_inference"
+      }
+    ],
+    "use_scenarios": [
+      {
+        "name": "办公室与健身后饮用",
+        "description": "在缺少固定料理设备的场景中制作一杯即饮饮品。",
+        "evidence_ids": [
+          "target-pb-001"
+        ],
+        "confidence": 0.84,
+        "source_type": "ai_inference"
+      }
+    ],
+    "selling_points": [
+      {
+        "name": "可拆洗刀头",
+        "description": "以可拆洗结构降低刀头周围的清洁负担。",
+        "evidence_ids": [
+          "target-pb-001"
+        ],
+        "confidence": 0.95,
+        "source_type": "ai_inference"
+      },
+      {
+        "name": "通勤防漏",
+        "description": "防漏杯盖与轻量设计共同服务于随身携带场景。",
+        "evidence_ids": [
+          "target-pb-001"
+        ],
+        "confidence": 0.9,
+        "source_type": "ai_inference"
+      }
+    ],
+    "information_gaps": [
+      {
+        "field": "电池容量与续航次数",
+        "reason": "商品描述只声明 USB-C 充电，未提供可验证续航参数。",
+        "impact": "high",
+        "evidence_ids": [
+          "target-pb-001"
+        ],
+        "confidence": 0.98,
+        "source_type": "ai_inference"
+      }
+    ]
+  },
+  "competitor_analysis": {
+    "product_id": "target-pb-001",
+    "price_range": {
+      "currency": "USD",
+      "minimum": 29.99,
+      "median": 42.99,
+      "maximum": 49.99,
+      "sample_size": 3,
+      "evidence_ids": [
+        "pb-c001",
+        "pb-c002",
+        "pb-c003"
+      ],
+      "confidence": 1,
+      "source_type": "calculated"
+    },
+    "competitor_matrix": [
+      {
+        "competitor_id": "pb-c001",
+        "name": "BlendGo Mini",
+        "price": 29.99,
+        "currency": "USD",
+        "rating": 4.1,
+        "review_count": 1280,
+        "features": [
+          "单键操作",
+          "USB-C 充电",
+          "380ml"
+        ],
+        "selling_points": [
+          "低价",
+          "轻量"
+        ],
+        "evidence_ids": [
+          "pb-c001"
+        ],
+        "confidence": 1,
+        "source_type": "data_fact"
+      },
+      {
+        "competitor_id": "pb-c002",
+        "name": "FreshMix Pro",
+        "price": 49.99,
+        "currency": "USD",
+        "rating": 4.4,
+        "review_count": 860,
+        "features": [
+          "六叶刀头",
+          "自动清洗",
+          "450ml"
+        ],
+        "selling_points": [
+          "搅拌能力",
+          "易清洁"
+        ],
+        "evidence_ids": [
+          "pb-c002"
+        ],
+        "confidence": 1,
+        "source_type": "data_fact"
+      },
+      {
+        "competitor_id": "pb-c003",
+        "name": "ActiveCup One",
+        "price": 42.99,
+        "currency": "USD",
+        "rating": 4.2,
+        "review_count": 640,
+        "features": [
+          "防漏锁扣",
+          "电量显示",
+          "400ml"
+        ],
+        "selling_points": [
+          "通勤防漏",
+          "续航可视"
+        ],
+        "evidence_ids": [
+          "pb-c003"
+        ],
+        "confidence": 1,
+        "source_type": "data_fact"
+      }
+    ],
+    "strengths": [
+      {
+        "title": "兼顾防漏与清洁",
+        "description": "目标商品同时声明防漏杯盖和可拆洗刀头，覆盖两类使用阻力。",
+        "evidence_ids": [
+          "target-pb-001",
+          "pb-r002",
+          "pb-r005"
+        ],
+        "confidence": 0.84,
+        "source_type": "ai_inference"
+      }
+    ],
+    "weaknesses": [
+      {
+        "title": "性能与续航缺少参数",
+        "description": "目标描述没有可用于比较搅拌能力和续航的量化规格。",
+        "evidence_ids": [
+          "target-pb-001",
+          "pb-r001",
+          "pb-r006"
+        ],
+        "confidence": 0.82,
+        "source_type": "ai_inference"
+      }
+    ],
+    "differentiation_opportunities": [
+      {
+        "opportunity_id": "opp-pb-001",
+        "title": "可验证的易清洁结构",
+        "description": "将可拆洗刀头与清洁步骤展示为核心差异，而不只使用泛化的易清洁表述。",
+        "evidence_ids": [
+          "target-pb-001",
+          "pb-r002"
+        ],
+        "confidence": 0.86,
+        "source_type": "ai_inference"
+      }
+    ]
+  },
+  "pain_points": [
+    {
+      "pain_point_id": "pain-pb-performance",
+      "name": "复杂食材处理能力不稳定",
+      "description": "负向评论信号显示，冻结食材或实际搅拌表现可能影响使用预期。",
+      "frequency": {
+        "count": 2,
+        "level": "high",
+        "sample_size": 6,
+        "evidence_ids": [
+          "pb-r001",
+          "pb-r004"
+        ],
+        "confidence": 1,
+        "source_type": "calculated"
+      },
+      "severity": {
+        "level": "high",
+        "reason": "搅拌能力直接影响商品核心任务能否完成。",
+        "evidence_ids": [
+          "pb-r001",
+          "pb-r004"
+        ],
+        "confidence": 0.88,
+        "source_type": "ai_inference"
+      },
+      "affected_scenarios": [
+        "使用冻结水果制作饮品",
+        "健身后快速制作饮品"
+      ],
+      "competitor_ids": [
+        "pb-c001",
+        "pb-c002"
+      ],
+      "evidence_ids": [
+        "pb-r001",
+        "pb-r004"
+      ],
+      "evidence_status": "sufficient",
+      "confidence": 0.88,
+      "source_type": "ai_inference"
+    }
+  ],
+  "recommendations": [
+    {
+      "recommendation_id": "rec-pb-001",
+      "title": "验证并明确复杂食材处理边界",
+      "content": "在产品验证中覆盖冻结水果等高阻力食材，并在 Listing 中明确建议切块尺寸和适用食材。",
+      "type": "product_improvement",
+      "related_pain_point_ids": [
+        "pain-pb-performance"
+      ],
+      "related_opportunity_ids": [],
+      "evidence_ids": [
+        "pb-r001",
+        "pb-r004"
+      ],
+      "user_value": "high",
+      "priority": "P0",
+      "implementation_effort": "medium",
+      "risk_note": "测试完成前不得承诺能够处理所有冻结食材。",
+      "confidence": 0.88,
+      "source_type": "recommendation"
+    },
+    {
+      "recommendation_id": "rec-pb-002",
+      "title": "用拆洗步骤强化易清洁卖点",
+      "content": "在 Listing 中展示刀头拆卸和清洁步骤，把结构证据放在泛化卖点之前。",
+      "type": "listing_optimization",
+      "related_pain_point_ids": [
+        "pain-pb-performance"
+      ],
+      "related_opportunity_ids": [
+        "opp-pb-001"
+      ],
+      "evidence_ids": [
+        "pb-r002"
+      ],
+      "user_value": "medium",
+      "priority": "P1",
+      "implementation_effort": "low",
+      "risk_note": "易清洁表述应与实际结构和清洁测试一致。",
+      "confidence": 0.82,
+      "source_type": "recommendation"
+    }
+  ],
+  "validation_summary": {
+    "schema_valid": true,
+    "evidence_ids_valid": true,
+    "calculations_verified": true,
+    "unsupported_claim_count": 0,
+    "warnings": []
+  },
+  "disclaimer": "所有商品、价格与评论均为作品集演示用虚构数据。"
+}

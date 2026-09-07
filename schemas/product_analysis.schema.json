@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketflow.local/schemas/product_analysis.schema.json",
+  "title": "MarketFlow AI Product Analysis",
+  "description": "Agent 1 的商品分析结构。所有分析结论均携带证据、置信度与结论来源类型。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "product_id",
+    "positioning",
+    "target_users",
+    "use_scenarios",
+    "selling_points",
+    "information_gaps"
+  ],
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "对应 product.json 中的 product_id。"
+    },
+    "positioning": {
+      "$ref": "#/$defs/insightClaim",
+      "description": "商品定位结论。"
+    },
+    "target_users": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/namedInsight" }
+    },
+    "use_scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/namedInsight" }
+    },
+    "selling_points": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/namedInsight" }
+    },
+    "information_gaps": {
+      "type": "array",
+      "description": "商品描述中缺失、需要补充或验证的信息；允许为空。",
+      "items": { "$ref": "#/$defs/informationGap" }
+    }
+  },
+  "$defs": {
+    "sourceType": {
+      "type": "string",
+      "enum": ["data_fact", "calculated", "ai_inference", "recommendation"],
+      "description": "Data Fact、Calculated、AI Inference、Recommendation 的机器可读值。"
+    },
+    "evidenceIds": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true,
+      "description": "引用的 product_id、competitor_id 或 review_id。"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "0 到 1 的结论置信度，不代表统计概率。"
+    },
+    "insightClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["content", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "content": { "type": "string", "minLength": 1 },
+        "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "source_type": { "$ref": "#/$defs/sourceType" }
+      }
+    },
+    "namedInsight": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "description", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "source_type": { "$ref": "#/$defs/sourceType" }
+      }
+    },
+    "informationGap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "reason", "impact", "evidence_ids", "confidence", "source_type"],
+      "properties": {
+        "field": { "type": "string", "minLength": 1 },
+        "reason": { "type": "string", "minLength": 1 },
+        "impact": { "type": "string", "enum": ["low", "medium", "high"] },
+        "evidence_ids": { "$ref": "#/$defs/evidenceIds" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "source_type": { "const": "ai_inference" }
+      }
+    }
+  }
+}
